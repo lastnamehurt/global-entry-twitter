@@ -34,3 +34,13 @@ def post_initial_appointments(dry=True):
         else:
             bot.api.update_status(tweet)
             time.sleep(5)
+
+def backfill_single_model(location_id):
+    for val in LOCATIONS_MAP.values():
+        if val['id'] == location_id:
+            obj = interview_slot_repo.create(location_name=val['name'], location_id=location_id)
+            appointment_date = interview_finder_service._get_new_appointment_datetime(val['id'])
+            # save to db
+            obj.appointment_date = appointment_date
+            obj.save()
+    return obj

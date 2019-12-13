@@ -13,6 +13,7 @@ class Constants:
     PORTLAND_ID = 7960
     DALLAS_ID = 5300
     PITTSBURGH_ID = 9200
+    SEATTLE_ID = 5420
     LOCATION_ID = None
     SCHEDULE_INTERVIEW_LINK = 'https://ttp.cbp.dhs.gov/schedulerapi/locations/{}/slots?startTimestamp={}T00%3A00%3A00&endTimestamp=''T00%3A00%3A00'.format(
         LOCATION_ID, '', '')
@@ -30,5 +31,6 @@ LOCATIONS_MAP = {
     'Dulles': {'id': Constants.DC_ID, 'name': 'Dulles'},
     'Portland': {'id': Constants.PORTLAND_ID, 'name': 'Portland'},
     'Dallas': {'id': Constants.DALLAS_ID, 'name': 'DFW'},
+    'Seattle': {'id': Constants.SEATTLE_ID, 'name': 'SeaTac International'},
     'Philadelphia': {'id': Constants.PITTSBURGH_ID, 'name': 'Pittsburgh'},
 }
