@@ -12,7 +12,7 @@ convert_datetime_string_to_datetime = lambda timestamp_string: datetime.datetime
                                                                                           "%A, %b. %d %H:%M")
 convert_to_datetime_from_string_with_dashes = lambda timestamp_string: datetime.datetime.strptime(timestamp_string,
                                                                                                   "%Y-%m-%d %H:%M")
-convert_datetime_to_string = lambda date_time: datetime.datetime.strftime(date_time, "%A, %b. %d @ %H:%M")
+convert_datetime_to_string = lambda date_time: datetime.datetime.strftime(date_time, "%A, %b. %d, %Y @ %H:%M")
 logging.basicConfig(level=logging.INFO, format='%(asctime)s | %(levelname)s | %(funcName)s |%(message)s')
 
 
