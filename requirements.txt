@@ -1,4 +1,4 @@
 schedule==0.6.0
 tweepy==3.7.0
-Django==1.11.17
+Django==1.11.29
 requests==2.22.0
