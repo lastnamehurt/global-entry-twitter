@@ -16,6 +16,9 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from customer.views import SignupFormView
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url('/', SignupFormView.as_view()),
 ]
